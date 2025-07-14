@@ -16,7 +16,7 @@ public class convertToJava {
         double balanceAmount = 0.0;
         Set<String> interests = new HashSet<>();
 
-        // Extract fields manually
+        
         for (String part : json.split(",")) {
             part = part.trim();
 
@@ -27,7 +27,7 @@ public class convertToJava {
             } else if (part.contains("\"balanceAmount\"")) {
                 balanceAmount = Double.parseDouble(part.split(":")[1].trim());
             } else if (part.contains("\"interest\"")) {
-                // Extract full array content
+                
                 int start = json.indexOf("[");
                 int end = json.indexOf("]");
                 String interestRaw = json.substring(start + 1, end);
