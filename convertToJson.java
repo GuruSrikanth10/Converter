@@ -25,7 +25,7 @@ public class convertToJson {
     }
 
     private static String escapeJson(String input) {
-        return input.replace("\"", "\\\""); // simple escape for double quotes
+        return input.replace("\"", "\\\""); 
     }
 
     private static String convertSetToJsonArray(Set<String> set) {
